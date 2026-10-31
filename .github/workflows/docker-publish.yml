@@ -23,3 +23,8 @@ jobs:
           context: .
           push: true
           tags: praveenkumargurumoorthy/health-checker:latest
+
+      - name: Deploy Locally via Docker Compose
+              run: |
+                docker compose pull
+                docker compose up -d --force-recreate
